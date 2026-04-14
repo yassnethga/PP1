@@ -87,10 +87,13 @@ Fill out the following table, mapping decimal numbers `0` through `15` to their 
 | 15      | 1111                   |
 
 **How many binary digits (bits) are needed?**
+
 4 bits
+
 Explain how to calculate the number of bits required:
 <details>
 <summary>Your Answer</summary>
+
 To calculate the number of bits required, we use the formula:
 
   Number of bits = log2(N)
