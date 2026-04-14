@@ -67,19 +67,42 @@ When you have finished working, in Moodle, click "Add solution" and submit the l
 ### Task 1: Mapping Symbols to Binary
 Fill out the following table, mapping decimal numbers `0` through `15` to their binary representations:
 
-| Decimal | Binary Representation |
+| Decimal | Binary Representation  |
 |---------|------------------------|
 | 0       | 0000                   |
 | 1       | 0001                   |
-| ...     | ...                    |
-| 15      | ????                   |
+| 2       | 0010                   |
+| 3       | 0011                   |
+| 4       | 0100                   |
+| 5       | 0101                   |
+| 6       | 0110                   |
+| 7       | 0111                   |
+| 8       | 1000                   |
+| 9       | 1001                   |
+| 10      | 1010                   |
+| 11      | 1011                   |
+| 12      | 1100                   |
+| 13      | 1101                   |
+| 14      | 1110                   |
+| 15      | 1111                   |
 
 **How many binary digits (bits) are needed?**
-
+4 bits
 Explain how to calculate the number of bits required:
 <details>
 <summary>Your Answer</summary>
-Erase this text and write your answer here!
+To calculate the number of bits required, we use the formula:
+
+  Number of bits = log2(N)
+
+ where N is the number of different values.
+
+In this case, we want to represent numbers from 0 to 15, which are 16 values in total.
+
+   log2(16) = 4
+
+ Therefore, 4 bits are required.
+
 </details>
 
 ---
@@ -107,14 +130,24 @@ Refer to the truth table of a 1-bit full adder:
 #### Your Task
 Create a truth table for a **2-bit adder** without carry-in. What are the possible inputs and outputs?
 
->   Your
->
->   table
->
->   goes
->
->   here!
-
+| A1 | A0 | B1 | B0 | Sum | S2 | S1 | S0 |
+|----|----|----|----|-----|----|----|----|
+| 0  | 0  | 0  | 0  |  0  | 0  | 0  | 0  |
+| 0  | 0  | 0  | 1  |  1  | 0  | 0  | 1  |
+| 0  | 0  | 1  | 0  |  2  | 0  | 1  | 0  |
+| 0  | 0  | 1  | 1  |  3  | 0  | 1  | 1  |
+| 0  | 1  | 0  | 0  |  1  | 0  | 0  | 1  |
+| 0  | 1  | 0  | 1  |  2  | 0  | 1  | 0  |
+| 0  | 1  | 1  | 0  |  3  | 0  | 1  | 1  |
+| 0  | 1  | 1  | 1  |  4  | 1  | 0  | 0  |
+| 1  | 0  | 0  | 0  |  2  | 0  | 1  | 0  |
+| 1  | 0  | 0  | 1  |  3  | 0  | 1  | 1  |
+| 1  | 0  | 1  | 0  |  4  | 1  | 0  | 0  |
+| 1  | 0  | 1  | 1  |  5  | 1  | 0  | 1  |
+| 1  | 1  | 0  | 0  |  3  | 0  | 1  | 1  |
+| 1  | 1  | 0  | 1  |  4  | 1  | 0  | 0  |
+| 1  | 1  | 1  | 0  |  5  | 1  | 0  |  1 |
+| 1  | 1  | 1  | 1  |  6  | 1  | 1  | 0  |
 ---
 
 ### Task 3: Boolean Equations via Karnaugh Maps
@@ -128,11 +161,11 @@ Use the [K-Map method](https://github.com/STEMgraph/4b957490-badf-4264-b9f2-1b5a
 <details>
 <summary>The final functions</summary>
 
-Q<sub>0</sub> = .......
+Q<sub>0</sub> = A0 XOR B0
 
-Q<sub>1</sub> = .......
+Q<sub>1</sub> = (A1 XOR B1) XOR (A0 AND B0)
 
-C<sub>out</sub> = .......
+C<sub>out</sub> = (A1 AND B1) OR ((A1 XOR B1) AND (A0 AND B0))
 
 </details>
 
@@ -143,10 +176,11 @@ Using your Boolean equations, build a logic network in [CircuitVerse](https://ci
 
 <details>
 <summary>Your solution</summary>
-A share link to your solution goes here: <a href=".................">Link!</a>
+A share link to your solution goes here: <a href="[.................](https://circuitverse.org/users/418584/projects/yassine-8bd4f858-2894-4c17-aacd-db62d67c1b9f)">Link!</a>
 </details>
 
 ---
 
 **Remember:** Stop working after 90 minutes and record where you stopped!
-
+Time spent: 75 minutes
+Stopped at: Task 4 (Circuit implementation)
